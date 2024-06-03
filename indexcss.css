@@ -1,0 +1,83 @@
+body {
+      
+        background-color:black;
+        color:white;
+    }
+
+    h1, h2 {
+        color:Red;
+    }
+
+    .grand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width:340px;
+    }
+
+    .grandM {
+        background-color:black;
+        padding: 20px;
+        width:80%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px red;
+    }
+    input, select, button {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid red;
+        background-color: black; 
+        color:white;
+        transition:1s;
+    }
+
+    input::placeholder {
+        color:white;
+    }
+    input:hover{
+    transform:scale(1.11);
+    border:2px solid white;
+    }
+    
+    select:hover{
+    transform:scale(1.11);
+    border:2px solid white;
+    }
+
+    button {
+        cursor: pointer;
+        transition:1s;
+    }
+
+    button:hover {
+        background-color:black;
+        border: 2px solid white;
+        transform:scale(1.11);
+    }
+
+    #out {
+        background-color:black;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px red;
+        width: 270px;
+        overflow-wrap:break-word;
+        
+    }
+#b2:hover{
+background-color:green;
+border:2px solid white;
+}
+
+    img:hover {
+        opacity: 0.8;
+    }
+    .dvlpmi{
+    background:linear-gradient(74deg, rgb(66, 133, 244), rgb(155, 114, 203), rgb(217, 101, 112));
+    color:transparent;
+    background-clip:text;
+    
+    }
