@@ -1,0 +1,186 @@
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiverse Documentation</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .title {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #888;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .intro, .installation, .usage, .character-sets, .note, .demo, .company, .types, .parameters {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        pre {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #ffcc00;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        a {
+            color:red;
+            text-decoration:none;
+            
+        }
+
+        a:hover {
+            text-decoration:none;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+.dvlpmi{
+    background:linear-gradient(74deg, rgb(66, 133, 244), rgb(155, 114, 203), rgb(217, 101, 112));
+    color:transparent;
+    background-clip:text;
+    
+    }
+    </style>
+<script>
+alert("We created this documentation using Gemini & ChatGPT because we are still learning English and our proficiency in the language is limited. We relied on Gemini & ChatGPT to help us write this documentation based on our instructions and knowledge.");
+</script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="dvlpmi">Multiverse</h1>
+        <p class="tagline">Secure your data with ease using our versatile encryption-decryption library.</p>
+    </header>
+    <main class="main-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>The Multiverse, is Cryptography Library <br> written in JavaScript <br> developed by Microintel designed to provide robust encryption and decryption capabilities for web applications. <br> This library supports a wide range of character sets, making it highly versatile and adaptable for various use cases.</p>
+        </section>
+        
+        <section class="installation">
+            <h2>Installation</h2>
+            <p>Include the Multiverse Encryption-Decryption Library in your project by adding the following script tag:</p>
+            <pre><code>&lt;script src="https://microintel.github.io/multiverse/multiverse.js">&lt;/script></code></pre>
+        </section>
+        <section class="parameters">
+            <h2>Parameters</h2>
+            <ul>
+                <li><strong>1st parameter : </strong>[for user input] input text to be encrypted or decrypted.</li>
+                <li><strong>2nd parameter : </strong> The operation to be performed: 'e' for encryption, 'd' for decryption.</li>
+                <li><strong>3rd parameter : </strong>The key for encryption/decryption. </li>
+                <li><strong>4th parameter : </strong> The type of character set to be used. Refer to the character sets section for available types.<a href="#cs" >here</a></li>
+            </ul>
+        </section>
+        <section class="usage">
+            <h2>Usage</h2>
+            <div class="usage-example">
+                <h3>Basic Usage</h3>
+                <pre><code>const plaintext = 'hello';
+                   const key = 5;
+                      const charSet = 'alpha';
+
+                  const encryptedText = ed(plaintext, 'e', key, charSet);
+                  console.log('Encrypted Text:', encryptedText);
+
+          const decryptedText = ed(encryptedText, 'd', key, charSet);
+    console.log('Decrypted Text:', decryptedText);</code></pre>
+     </div>
+        </section>
+        <section id="cs" class="types">
+            <h2>Character Sets</h2>
+            <p>The library supports multiple character sets, each suitable for different purposes. Here are the available types:</p>
+            <ul>
+                <li><strong>abcd :</strong> Alphabetic characters only (uppercase and lowercase).
+                    <pre><code>const encryptedText = ed('hello', 'e', 3, 'abcd');</code></pre>
+                </li>
+                <li><strong>alpha :</strong> Alphanumeric characters, including special symbols.
+                    <pre><code>const encryptedText = ed('hello123!', 'e', 5, 'alpha');</code></pre>
+                </li>
+                <li><strong>spc :</strong> Special symbols only.
+                    <pre><code>const encryptedText = ed('!@#$', 'e', 4, 'spc');</code></pre>
+                </li>
+                <li><strong>kalpha :</strong> Kannada + alphabetic characters.
+                    <pre><code>const encryptedText = ed('ಹೆಲ್ಲೋ', 'e', 2, 'kalpha');</code></pre>
+                </li>
+                <li><strong>telpha :</strong> Telugu + alphabetic characters.
+                    <pre><code>const encryptedText = ed('హలో', 'e', 6, 'telpha');</code></pre>
+                </li>
+                <li><strong>galpha :</strong> Greek + alphabetic characters.
+                    <pre><code>const encryptedText = ed('γειά', 'e', 7, 'galpha');</code></pre>
+                </li>
+                <li><strong>talpha :</strong> Tamil + alphabetic characters.
+                    <pre><code>const encryptedText = ed('வணக்கம்', 'e', 3, 'talpha');</code></pre>
+                </li>
+                <li><strong>malpha :</strong> Malayalam + alphabetic characters.
+                    <pre><code>const encryptedText = ed('ഹലോ', 'e', 5, 'malpha');</code></pre>
+                </li>
+                <li><strong>nalpha :</strong> Hindi + alphabetic characters.
+                    <pre><code>const encryptedText = ed('नमस्ते', 'e', 4, 'nalpha');</code></pre>
+                </li>
+                <li><strong>allpha :</strong> A combination of all supported character sets.
+                    <pre><code>const encryptedText = ed('Hello123!', 'e', 8, 'allpha');</code></pre>
+                </li>
+            </ul>
+        </section>
+        <section class="note">
+            <h2>Note</h2>
+            <p>Some keys may not work properly due to the nature of the character sets. Please test different keys to find a working key for your specific use case.</p>
+        </section>
+        <section class="demo">
+            <h2>Demo</h2>
+            <p>Explore the <a href="mvd.html" target="_blank">demo</a> to see the library in action.</p>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="dvlpmi">
+      <center>
+      <font style="letter-spacing:0px;margin:0px;font-size:8px;color:white;"><b>Developed By</b></font><br>
+      <font style="margin:0px;font-size:16px;letter-spacing:0px;"><b>MICROINTEL GEMINI CHATGPT</b></font>
+      </center>
+      </div>
+    </footer>
+    
+</body>
+</html>
